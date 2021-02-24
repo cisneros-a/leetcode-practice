@@ -30,3 +30,20 @@ var longestCommonPrefix = function (strs) {
 
   return strs[0].slice(0, counter - 1);
 };
+
+var isPalindrome = function (x) {
+  if (x < 0) {
+    return false;
+  }
+  let s = x.toString();
+  let left = 0;
+  let right = s.length - 1;
+  while (left < right) {
+    if (s[left] !== s[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
+};
